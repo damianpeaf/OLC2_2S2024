@@ -10,7 +10,9 @@ Multiplicacion
     / Numero
 
 Numero
-    = [0-9]+ { return { tipo: "numero", valor: parseInt(text(), 10) } }
+= [0-9]+( "." [0-9]+ )? { return{ tipo: "numero", valor: parseFloat(text(), 10) } }
+    // = [0-9]+ { return { tipo: "numero", valor: parseInt(text(), 10) } }
+
 
 
 // 1 + 2 * 3 + 4
