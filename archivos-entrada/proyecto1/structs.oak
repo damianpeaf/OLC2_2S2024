@@ -1,0 +1,167 @@
+// ------------------------------------------------------------
+
+System.out.println("********** Declaración Structs **********");
+
+struct Persona {
+    string nombre;
+    int edad;
+    float estatura;
+};
+
+struct Auto {
+    string marca;
+    string modelo;
+    int anio;
+    Persona propietario;
+};
+
+System.out.println("Ok");
+System.out.println("");
+
+System.out.println("********** Instancias **********");
+
+System.out.println("1. Con var");
+
+var persona1 = Persona{
+    nombre: "Juan",
+    edad: 20,
+    estatura: 1.70
+};
+System.out.println("Ok");
+System.out.println("");
+
+System.out.println("2. Usando por tipo el nombre del Struct");
+Persona persona2 = Persona{
+    nombre: "Maria",
+    edad: 25,
+    estatura: 1.60
+};
+System.out.println("Ok");
+System.out.println("");
+
+System.out.println("3. Con Structs anidados simple");
+
+var auto1 = Auto{
+    marca: "Toyota",
+    modelo: "Corolla",
+    anio: 2020,
+    propietario: persona1
+};
+System.out.println("Ok");
+System.out.println("");
+
+System.out.println("4. Con Structs anidados por declaracion");
+
+Auto auto2 = Auto{
+    marca: "Nissan",
+    modelo: "Sentra",
+    anio: 2019,
+    propietario: Persona{
+        nombre: "Pedro",
+        edad: 30,
+        estatura: 1.80
+    }
+};
+System.out.println("Ok");
+
+System.out.println("********** Asignacion de propiedades primivitas **********");
+
+persona1.nombre = "Juanito";
+persona1.edad = 21;
+
+persona2.nombre = "Maria";
+persona2.edad = 26;
+
+auto1.marca = "Toyota";
+
+System.out.println("Ok");
+System.out.println("");
+
+System.out.println("********** Acceso a propiedades primivitas **********");
+
+System.out.println(persona1.nombre);
+System.out.println(persona1.edad);
+System.out.println(persona1.estatura);
+
+System.out.println(persona2.nombre);
+System.out.println(persona2.edad);
+System.out.println(persona2.estatura);
+
+System.out.println(auto1.marca);
+System.out.println(auto1.modelo);
+System.out.println(auto1.anio);
+
+System.out.println("");
+
+System.out.println("********** Asignación a propiedades de Structs anidados **********");
+
+auto1.propietario.nombre = "Juanote";
+auto1.propietario.edad = 30;
+System.out.println("Ok");
+System.out.println("");
+
+System.out.println("********** Acceso a propiedades de Structs anidados **********");
+
+System.out.println(auto1.propietario.nombre);
+System.out.println(auto1.propietario.edad);
+
+System.out.println(persona1.nombre);
+System.out.println(persona1.edad);
+
+System.out.println(auto2.propietario.nombre);
+System.out.println(auto2.propietario.edad);
+
+System.out.println("********** Funcion Object.keys **********");
+
+System.out.println(Object.keys(persona1));
+System.out.println(Object.keys(auto1));
+
+
+/*
+Salida esperada:
+
+********** Declaración Structs **********
+Ok
+
+********** Instancias **********
+1. Con var
+Ok
+
+2. Usando por tipo el nombre del Struct
+Ok
+
+3. Con Structs anidados simple
+Ok
+
+4. Con Structs anidados por declaracion
+Ok
+
+********** Asignacion de propiedades primivitas **********
+Ok
+
+********** Acceso a propiedades primivitas **********
+Juanito
+21
+1.7
+Maria
+26
+1.6
+Toyota
+Corolla
+2020
+
+********** Asignación a propiedades de Structs anidados **********
+Ok
+
+********** Acceso a propiedades de Structs anidados **********
+Juanote
+30
+Juanote
+30
+Pedro
+30
+
+********** Funcion Object.keys **********
+nombre,edad,estatura
+marca,modelo,anio,propietario
+*/
