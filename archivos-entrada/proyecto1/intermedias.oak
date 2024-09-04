@@ -126,22 +126,24 @@ System.out.println("");
 System.out.println("2. While anidado");
 
 int n = 5;
-int i = 0;
+int x = 0;
 
-while (i < n) {
+while (x < n) {
     int j = 0;
+
+    string spaces = "";
     
     while (j < n) {
-        if (i == j || i + j == n - 1) {
-            System.out.print("*");
+        if (x == j || x + j == n - 1) {
+            spaces = spaces + "*";
         } else {
-            System.out.print(" ");
+            spaces = spaces + " ";
         }
         j = j + 1;
     }
-    
-    System.out.println("");
-    i = i + 1;
+
+    System.out.println(spaces);
+    x = x + 1;
 }
 
 System.out.println("");
