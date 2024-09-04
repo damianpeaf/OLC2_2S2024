@@ -35,11 +35,11 @@ System.out.println("");
 
 System.out.println("2. Con retorno");
 
-int sumar(int a, int b) {
+int sumar2(int a, int b) {
     return a + b;
 }
 
-System.out.println(sumar(10, 20));
+System.out.println(sumar2(10, 20));
 
 // ------------------------------------------------------------
 
