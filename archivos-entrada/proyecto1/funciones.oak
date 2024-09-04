@@ -87,6 +87,24 @@ hanoi(3, "A", "B", "C");
 
 // ------------------------------------------------------------
 
+System.out.println("********** Función definida dentro de bloque **********");
+
+int total(int a, int b) {
+    
+    int c = 10;
+
+    int sumar4() {
+        return a + b + c;
+    }
+
+    return sumar4();
+}
+
+System.out.println(total(10, 20)); // 40
+
+
+// ------------------------------------------------------------
+
 System.out.println("********** Funciones embebidas **********");
 
 System.out.println("1. parseInt");
@@ -177,6 +195,9 @@ Mover disco 3 de A a C
 Mover disco 1 de B a A
 Mover disco 2 de B a C
 Mover disco 1 de A a C
+
+********** Función definida dentro de bloque **********
+40
 
 ********** Funciones embebidas **********
 1. parseInt
