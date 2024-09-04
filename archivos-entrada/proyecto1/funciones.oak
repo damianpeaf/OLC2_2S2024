@@ -25,11 +25,11 @@ System.out.println("********** Funciones no recursivas con parámetros *********
 
 System.out.println("1. void");
 
-void saludar(string nombre) {
+void saludar2(string nombre) {
     System.out.println("Hola " + nombre);
 }
 
-saludar("mundo");
+saludar2("mundo");
 
 System.out.println("");
 
