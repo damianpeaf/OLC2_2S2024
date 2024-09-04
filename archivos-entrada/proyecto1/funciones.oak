@@ -75,10 +75,10 @@ System.out.println("3. Hanoi");
 
 void hanoi(int n, string origen, string auxiliar, string destino) {
     if (n == 1) {
-        System.out.println("Mover disco 1 de " + origen + " a " + destino);
+        System.out.println("Mover disco 1 de ", origen, " a ", destino);
     } else {
         hanoi(n - 1, origen, destino, auxiliar);
-        System.out.println("Mover disco " + n + " de " + origen + " a " + destino);
+        System.out.println("Mover disco ", n, " de ", origen, " a ", destino);
         hanoi(n - 1, auxiliar, origen, destino);
     }
 }
