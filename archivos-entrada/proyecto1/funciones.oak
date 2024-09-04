@@ -102,13 +102,13 @@ System.out.println(numero10); // 10
 System.out.println(numeroDecimal); // 10
 System.out.println("");
 
-System.out.println("2. parseFloat");
+System.out.println("2. parsefloat");
 
-System.out.println(parseFloat("10")); // 10.0
-System.out.println(parseFloat("10.5")); // 10.5
+System.out.println(parsefloat("10")); // 10.0
+System.out.println(parsefloat("10.5")); // 10.5
 
 // ERRORES. Comentar la linea.
-float numeroError3 = parseFloat("Hola");
+float numeroError3 = parsefloat("Hola");
 System.out.println("");
 
 System.out.println("3. toString");
@@ -183,7 +183,7 @@ Mover disco 1 de A a C
 10
 10
 
-2. parseFloat
+2. parsefloat
 10.0
 10.5
 

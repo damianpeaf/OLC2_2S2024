@@ -87,7 +87,7 @@ System.out.println("3. length");
 System.out.println(numerosPares.length); // 5
 
 System.out.println("");
-for (int i = 0; i < copiaPares.length; i++) {
+for (int i = 0; i < copiaPares.length; i = i + 1) {
     System.out.println(copiaPares[i]);
 }
 
