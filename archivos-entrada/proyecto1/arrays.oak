@@ -35,7 +35,7 @@ System.out.println("");
 System.out.println("2. Asignacion de elementos");
 numerosPares[2] = 20;
 System.out.println(numerosPares[2]); // 20
-System.out.println(copiaPares[2]); // 2
+System.out.println(copiaPares[2]); // 6
 System.out.println("");
 
 // ------------------------------------------------------------
