@@ -28,6 +28,8 @@ export const stringTo32BitsArray = (str) => {
 
     if (shift > 0) {
         resultado.push(intRepresentation);
+    } else {
+        resultado.push(0);
     }
 
     return resultado;
