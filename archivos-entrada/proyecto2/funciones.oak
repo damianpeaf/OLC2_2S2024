@@ -1,0 +1,135 @@
+// ------------------------------------------------------------
+
+System.out.println("********** Funciones no recursivas sin parámetros **********");
+
+System.out.println("1. void");
+
+void saludar() {
+    System.out.println("Hola");
+}
+
+saludar();
+System.out.println("");
+
+System.out.println("2. Con retorno");
+
+int sumar() {
+    return 10 + 20;
+}
+
+System.out.println(sumar());
+
+// ------------------------------------------------------------
+
+System.out.println("********** Funciones no recursivas con parámetros **********");
+
+System.out.println("1. void");
+
+void saludar2(string nombre) {
+    System.out.println("Hola " + nombre);
+}
+
+saludar2("mundo");
+
+System.out.println("");
+
+System.out.println("2. Con retorno");
+
+int sumar2(int a, int b) {
+    return a + b;
+}
+
+System.out.println(sumar2(10, 20));
+
+// ------------------------------------------------------------
+
+System.out.println("********** Funciones recursivas **********");
+
+System.out.println("1. Factorial");
+
+int factorial(int n) {
+    if (n == 0) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+
+System.out.println(factorial(5));
+System.out.println("");
+
+System.out.println("2. Fibonacci");
+
+int fibonacci(int n) {
+    if (n == 0 || n == 1) {
+        return n;
+    } else {
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+}
+
+System.out.println(fibonacci(10));
+System.out.println("");
+
+System.out.println("3. Ackermann");
+
+int ackermann(int m, int n) {
+    if (m == 0) {
+        return n + 1;
+    } else if (n == 0) {
+        return ackermann(m - 1, 1);
+    } else {
+        return ackermann(m - 1, ackermann(m, n - 1));
+    }
+}
+
+// ------------------------------------------------------------
+
+System.out.println("********** Funciones embebidas **********");
+
+System.out.println("1. parseInt");
+
+string numeroConvertible = "10";
+int numero10 = parseInt(numeroConvertible);
+int numeroDecimal = parseInt("10.5123");
+
+string numeroNoConvertible = "Hola";
+parseInt(numeroNoConvertible); // ERROR EN TIEMPO DE EJECUCION: debe mostrar en consola el error de conversión
+
+System.out.println(numero10); // 10
+System.out.println(numeroDecimal); // 10
+System.out.println("");
+
+System.out.println("2. parsefloat");
+
+System.out.println(parsefloat("10")); // 10.0
+System.out.println(parsefloat("10.5")); // 10.5
+parsefloat(numeroNoConvertible); // ERROR EN TIEMPO DE EJECUCION: debe mostrar en consola el error de conversión
+
+System.out.println("");
+
+System.out.println("3. toString");
+
+System.out.println(toString(10)); // "10"
+System.out.println(toString(10.5)+toString(10)); // "10.510"
+System.out.println("Fortran es el mejor lenguaje: " + toString(true)); // "Fortran es el mejor lenguaje: true"
+System.out.println("");
+
+System.out.println("4. toLowerCase");
+System.out.println(toLowerCase("HOLA MUNDO")); // "hola mundo"
+
+System.out.println("5. toUpperCase");
+
+System.out.println(toUpperCase("hola mundo")); // "HOLA MUNDO"
+
+System.out.println("6. typeof");
+int numero = 10;
+float decimal = 10.5;
+string cadena = "Hola mundo";
+char letra = 'a';
+
+System.out.println(typeof numero); // "int"
+System.out.println(typeof decimal); // "float"
+System.out.println(typeof cadena); // "string"
+System.out.println(typeof letra); // "char"
+System.out.println(typeof true); // "boolean"

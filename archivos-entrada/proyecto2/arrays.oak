@@ -1,0 +1,74 @@
+
+// ------------------------------------------------------------
+
+System.out.println("********** Creacion de array **********");
+
+System.out.println("1. Con lista de valores");
+
+int[] numerosPares = {2, 4, 6, 8, 10};
+
+for (int i = 0; i < 5; i = i + 1) {
+    System.out.println(numerosPares[i]);
+}
+System.out.println("Ok");
+System.out.println("");
+
+System.out.println("2. Con tamaño");
+
+int[] llenoDeCeros = new int[5];
+
+for (int i = 0; i < 5; i = i + 1) {
+    System.out.println(llenoDeCeros[i]);
+}
+System.out.println("Ok");
+System.out.println("");
+
+System.out.println("3. Por copia");
+int[] copiaPares = numerosPares;
+
+for (int i = 0; i < 5; i = i + 1) {
+    System.out.println(copiaPares[i]);
+}
+System.out.println("Ok");
+System.out.println("");
+
+// ------------------------------------------------------------
+
+System.out.println("********** Acceso a elementos **********");
+
+
+System.out.println("1. Lectura de elementos");
+System.out.println(numerosPares[0]); // 2
+System.out.println(numerosPares[2]); // 6
+System.out.println(numerosPares[1]+numerosPares[3]); // 12
+System.out.println(llenoDeCeros[0]); // 0
+System.out.println(llenoDeCeros[4]); // 0
+System.out.println("");
+
+
+System.out.println("********** Asignacion de elementos **********");
+
+numerosPares[2] = 20;
+System.out.println(numerosPares[2]); // 20
+System.out.println(copiaPares[2]); // 6
+System.out.println("");
+
+System.out.println("********** Funciones y propedades de array **********");
+
+System.out.println("1. indexOf");
+
+System.out.println(numerosPares.indexOf(10)); // 1
+System.out.println(numerosPares.indexOf(5)); // -1
+System.out.println("");
+
+System.out.println("2. join");
+System.out.println(copiaPares.join()); // 2, 4, 6, 8, 10
+System.out.println("");
+
+System.out.println("3. length");
+System.out.println(numerosPares.length); // 5
+
+System.out.println("");
+for (int i = 0; i < copiaPares.length; i = i + 1) {
+    System.out.println(copiaPares[i]);
+}

@@ -1,0 +1,284 @@
+// ------------------------------------------------------------
+
+System.out.println("********** Declaracion de variables **********");
+
+System.out.println("1. Manejo de entornos");
+
+System.out.println("1.1 Variable redeclarada en un entorno diferente");
+
+int b = 10;
+
+if (true) {
+    // No hay error porque se encuentra en un entorno diferente.
+    int b = 20;
+    System.out.println(b); // 20
+}
+
+System.out.println(b); // 10
+System.out.println("");
+
+System.out.println("1.2 Uso de variable en un entorno superior");
+
+int c = 10;
+int d = 10;
+
+if (true) {
+    int d = 20;
+    System.out.println(c); // 10
+    System.out.println(d); // 20
+
+    c = 30;
+    d = 30;
+}
+
+System.out.println(c); // 30
+System.out.println(d); // 10
+System.out.println("");
+
+// ------------------------------------------------------------
+
+System.out.println("********** IF **********");
+
+System.out.println("1. IF simple");
+
+if (true) {
+    System.out.println("Hola mundo");
+}
+
+System.out.println("");
+
+System.out.println("2. IF-ELSE");
+
+if (true) {
+    System.out.println("Hola mundo");
+} else {
+    System.out.println("Adios mundo");
+}
+
+if (false) {
+    System.out.println("Hola mundo");
+} else {
+    System.out.println("Adios mundo");
+}
+System.out.println("");
+
+System.out.println("3. IF-ELSEIF-ELSE");
+
+if (true) {
+    System.out.println("Hola mundo");
+} else if (true) {
+    System.out.println("Adios mundo");
+} else {
+    System.out.println("Hasta luego mundo");
+}
+
+if (false) {
+    System.out.println("Hola mundo");
+} else if (true) {
+    System.out.println("Adios mundo");
+} else {
+    System.out.println("Hasta luego mundo");
+}
+
+if (false) {
+    System.out.println("Hola mundo");
+} else if (false) {
+    System.out.println("Adios mundo");
+} else {
+    System.out.println("Hasta luego mundo");
+}
+
+System.out.println("");
+
+System.out.println("4. IF anidado");
+
+if (true) {
+    if (true) {
+        System.out.println("Hola mundo");
+    }
+}
+System.out.println("");
+
+// ------------------------------------------------------------
+System.out.println("********** While **********");
+
+
+System.out.println("1. While simple");
+
+int i = 0;
+while (i < 5) {
+    System.out.println(i);
+    i = i + 1;
+}
+
+System.out.println("");
+
+System.out.println("2. While anidado");
+
+int n = 5;
+int x = 0;
+
+while (x < n) {
+    int j = 0;
+
+    string spaces = "";
+    
+    while (j < n) {
+        if (x == j || x + j == n - 1) {
+            spaces = spaces + "*";
+        } else {
+            spaces = spaces + " ";
+        }
+        j = j + 1;
+    }
+
+    System.out.println(spaces);
+    x = x + 1;
+}
+
+System.out.println("");
+
+// ------------------------------------------------------------
+
+System.out.println("********** For **********");
+
+System.out.println("1. For simple");
+
+for (int i = 0; i < 5; i = i + 1) {
+    System.out.println(i);
+}
+
+System.out.println("");
+
+System.out.println("2. Foreach");
+
+int[] arr = {1, 2, 3, 4, 5};
+
+for (int elemento : arr) {
+    System.out.println(elemento);
+}
+
+System.out.println("");
+
+
+
+// ------------------------------------------------------------
+
+System.out.println("********** Switch **********");
+
+System.out.println("1. Switch simple");
+
+int dia = 1;
+
+switch (dia) {
+    case 1:
+        System.out.println("Lunes");
+        break;
+    case 2:
+        System.out.println("Martes");
+        break;
+    case 3:
+        System.out.println("Miercoles");
+        break;
+    case 4:
+        System.out.println("Jueves");
+        break;
+    case 5:
+        System.out.println("Viernes");
+        break;
+    case 6:
+        System.out.println("Sabado");
+        break;
+    case 7:
+        System.out.println("Domingo");
+        break;
+    default:
+        System.out.println("Dia invalido");
+}
+System.out.println("");
+
+System.out.println("2. Switch que ejecuta varios casos");
+
+int dia2 = 1;
+
+switch (dia2) {
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+        System.out.println("Dia laboral");
+        break;
+    case 6:
+    case 7:
+        System.out.println("Fin de semana");
+        break;
+    default:
+        System.out.println("Dia invalido");
+}
+System.out.println("");
+
+
+// ------------------------------------------------------------
+
+System.out.println("********** Break **********");
+
+System.out.println("1. Break en while");
+
+int cs = 0;
+
+while (true) {
+    System.out.println(cs);
+    cs = cs + 1;
+    
+    if (cs == 5) {
+        break;
+    }
+}
+
+System.out.println("");
+
+System.out.println("2. Break en for");
+
+for (int i = 0; i < 5; i = i + 1) {
+    System.out.println(i);
+    
+    if (i == 2) {
+        break;
+    }
+}
+
+System.out.println("");
+
+// ------------------------------------------------------------
+
+System.out.println("********** Continue **********");
+
+System.out.println("1. Continue en while");
+
+int cs2 = 0;
+
+while (cs2 < 11) {
+    
+    if (cs2 % 2 == 0) {
+        cs2 = cs2 + 1;
+        continue;
+    }
+
+    System.out.println(cs2);
+    cs2 = cs2 + 1;
+}
+System.out.println("");
+
+System.out.println("2. Continue en for");
+
+for (int i = 0; i < 5; i = i + 1) {
+    
+    if (i == 2) {
+        continue;
+    }
+    
+    System.out.println(i);
+}
+
+System.out.println("");

@@ -1,0 +1,371 @@
+
+
+// ------------------------------------------------------------
+
+System.out.println("********** Declaracion de variables **********");
+
+System.out.println("1. Declaracion con tipo y valor");
+
+int numero1 = 10;
+float numero2 = 20.5;
+string cadena = "Hola mundo";
+char letra = 'a';
+
+System.out.println(numero1);
+System.out.println(numero2);
+System.out.println(cadena);
+System.out.println(letra);
+System.out.println("");
+
+System.out.println("2. Declaracion infiriendo el tipo");
+
+var numero5 = 10; // tipo: int
+var numero6 = 20.5; // tipo: float
+var cadena2 = "Hola mundo"; // tipo: string
+var letra2 = 'a'; // tipo: char
+
+System.out.println(numero5);
+System.out.println(numero6);
+System.out.println(cadena2);
+System.out.println(letra2);
+System.out.println("");
+
+// ------------------------------------------------------------
+
+System.out.println("********** Asignacion de variables **********");
+
+// 1. Asignacion con tipo correcto
+numero1 = 20;
+numero2 = 30.5;
+cadena = "Adios mundo";
+letra = 'b';
+
+System.out.println(numero1);
+System.out.println(numero2);
+System.out.println(cadena);
+System.out.println(letra);
+System.out.println("");
+
+// ------------------------------------------------------------
+
+System.out.println("********** Operaciones aritmeticas **********");
+
+System.out.println("1. Suma / Concatenacion");
+
+System.out.println("1.1 int <-> int");
+System.out.println(10 + 5); // 15
+
+System.out.println("1.2 float <-> float");
+System.out.println(10.5 + 5.5); // 16.0
+
+System.out.println("1.3 int <-> float");
+System.out.println(10 + 5.5); // 15.5
+
+System.out.println("1.4 float <-> int");
+System.out.println(10.5 + 5); // 15.5
+
+System.out.println("1.5 var[int] <-> var[float]");
+System.out.println(numero5+numero6); // 30.5
+
+System.out.println("1.6 string <-> string");
+System.out.println("Hola" + " mundo"); // Hola mundo
+
+System.out.println("1.7 var[string] <-> string");
+System.out.println(cadena2 + " mundo"); // Hola mundo mundo
+
+System.out.println("");
+
+System.out.println("2. Resta");
+
+System.out.println("2.1 int <-> int");
+System.out.println(10 - 5); // 5
+
+System.out.println("2.2 float <-> float");
+System.out.println(10.5 - 5.5); // 5.0
+
+System.out.println("2.3 int <-> float");
+System.out.println(10 - 5.5); // 4.5
+
+System.out.println("2.4 float <-> int");
+System.out.println(10.5 - 5); // 5.5
+
+System.out.println("2.5 var[int] <-> var[float]");
+System.out.println(numero5-numero6); // -10.5
+
+System.out.println("");
+
+System.out.println("3. Multiplicacion");
+
+System.out.println("3.1 int <-> int");
+System.out.println(10 * 5); // 50
+
+System.out.println("3.2 float <-> float");
+System.out.println(10.5 * 5.5); // 57.75
+
+System.out.println("3.3 int <-> float");
+System.out.println(10 * 5.5); // 55.0
+
+System.out.println("3.4 float <-> int");
+System.out.println(10.5 * 5); // 52.5
+
+System.out.println("3.5 var[int] <-> var[float]");
+System.out.println(numero5*numero6); // 205.0
+System.out.println("");
+
+System.out.println("4. Division");
+
+System.out.println("4.1 int <-> int");
+System.out.println(10 / 5); // 2
+
+System.out.println("4.2 float <-> float");
+System.out.println(10.5 / 5.5); // 1.9090909090909092
+
+System.out.println("4.3 int <-> float");
+System.out.println(10 / 5.5); // 1.8181818181818181
+
+System.out.println("4.4 float <-> int");
+System.out.println(10.5 / 5); // 2.1
+
+System.out.println("4.5 var[int] <-> var[float]");
+System.out.println(numero5/numero6); // 0.4878048780487805
+System.out.println("");
+
+System.out.println("5. Modulo");
+System.out.println(10 % 5); // 0
+System.out.println(10 % 3); // 1
+System.out.println("");
+
+System.out.println("6. Resta unaria");
+System.out.println(-10); // -10
+System.out.println(--10); // 10
+System.out.println(-10.5); // -10.5
+System.out.println("");
+
+System.out.println("7. Compuesta");
+System.out.println(-2 + (10 + 5) * 2 / 3 + 5 % 2); // 9
+System.out.println(-2.0 + (8.5 + 4.25) * 2.0 / 2.0 + 10 % 3); // 11.75
+System.out.println("");
+
+// ------------------------------------------------------------
+
+System.out.println("********** Operaciones Relacionales **********");
+
+System.out.println("1. Igualdad");
+
+System.out.println("1.1 int <-> int");
+
+System.out.println(10 == 5); // false
+
+System.out.println("1.2 float <-> float");
+System.out.println(10.5 == 10.5); // true
+System.out.println(10.5 == 5.5); // false
+
+System.out.println("1.3 int <-> float");
+System.out.println(10 == 10.5); // false
+System.out.println(10 == 5.5); // false
+
+System.out.println("1.4 var[int] <-> var[float]");
+System.out.println(numero5 == numero6); // false
+
+System.out.println("1.5 string <-> string");
+System.out.println("Hola" == "Hola"); // true
+System.out.println("Hola" == "Mundo"); // false
+System.out.println("HolaMundo" == "Hola" + "Mundo"); // true
+
+System.out.println("1.6 var[string] <-> string");
+System.out.println(cadena2 == "Hola mundo"); // true
+
+System.out.println("1.7 boolean <-> boolean");
+System.out.println(true == true); // true
+System.out.println(true == false); // false
+
+System.out.println("1.8 char <-> char");
+System.out.println('a' == 'a'); // true
+System.out.println('a' == 'b'); // false
+
+System.out.println("");
+
+System.out.println("2. Diferencia");
+
+System.out.println("2.1 int <-> int");
+System.out.println(10 != 10); // false
+System.out.println(10 != 5); // true
+
+System.out.println("2.2 float <-> float");
+System.out.println(10.5 != 10.5); // false
+System.out.println(10.5 != 5.5); // true
+
+System.out.println("2.3 int <-> float");
+System.out.println(10 != 10.5); // true
+System.out.println(10 != 5.5); // true
+
+System.out.println("2.4 string <-> string");
+System.out.println("Hola" != "Hola"); // false
+System.out.println("Hola" != "Mundo"); // true
+
+System.out.println("2.5 var[string] <-> string");
+System.out.println(cadena2 != "Hola mundo"); // false
+
+System.out.println("2.6 boolean <-> boolean");
+System.out.println(true != true); // false
+System.out.println(true != false); // true
+
+System.out.println("2.7 char <-> char");
+System.out.println('a' != 'a'); // false
+System.out.println('a' != 'b'); // true
+
+System.out.println("");
+
+System.out.println("3. Mayor que");
+
+System.out.println("3.1 int <-> int");
+System.out.println(10 > 5); // true
+System.out.println(10 > 10); // false
+
+System.out.println("3.2 float <-> float");
+System.out.println(10.5 > 5.5); // true
+System.out.println(10.5 > 10.5); // false
+
+System.out.println("3.3 int <-> float");
+System.out.println(10 > 5.5); // true
+System.out.println(10 > 10.5); // false
+System.out.println(3.4 > 3); // true
+System.out.println(3.4 > 3.5); // false
+
+System.out.println("3.4 char <-> char");
+System.out.println('a' > 'b'); // false
+System.out.println('b' > 'a'); // true
+System.out.println('a' > 'a'); // false
+
+System.out.println("");
+
+System.out.println("4. Menor que");
+
+System.out.println("4.1 int <-> int");
+System.out.println(10 < 5); // false
+System.out.println(10 < 10); // false
+
+System.out.println("4.2 float <-> float");
+System.out.println(10.5 < 5.5); // false
+System.out.println(10.5 < 10.5); // false
+
+System.out.println("4.3 int <-> float");
+System.out.println(10 < 5.5); // false
+System.out.println(10 < 10.5); // true
+
+System.out.println("4.4 char <-> char");
+System.out.println('a' < 'b'); // true
+System.out.println('b' < 'a'); // false
+System.out.println('a' < 'a'); // false
+
+System.out.println("");
+
+System.out.println("5. Mayor o igual que");
+
+System.out.println("5.1 int <-> int");
+System.out.println(10 >= 5); // true
+System.out.println(10 >= 10); // true
+
+System.out.println("5.2 float <-> float");
+System.out.println(10.5 >= 5.5); // true
+System.out.println(10.5 >= 10.5); // true
+
+System.out.println("5.3 int <-> float");
+System.out.println(10 >= 5.5); // true
+System.out.println(10 >= 10.5); // false
+
+System.out.println("5.4 char <-> char");
+System.out.println('a' >= 'b'); // false
+System.out.println('b' >= 'a'); // true
+System.out.println('a' >= 'a'); // true
+
+System.out.println("");
+
+System.out.println("6. Menor o igual que");
+
+System.out.println("6.1 int <-> int");
+System.out.println(10 <= 5); // false
+System.out.println(10 <= 10); // true
+
+System.out.println("6.2 float <-> float");
+System.out.println(10.5 <= 5.5); // false
+System.out.println(10.5 <= 10.5); // true
+
+System.out.println("6.3 int <-> float");
+System.out.println(10 <= 5.5); // false
+System.out.println(10 <= 10.5); // true
+
+System.out.println("6.4 char <-> char");
+System.out.println('a' <= 'b'); // true
+System.out.println('b' <= 'a'); // false
+System.out.println('a' <= 'a'); // true
+
+System.out.println("");
+
+// ------------------------------------------------------------
+System.out.println("********** Operaciones Logicas **********");
+
+System.out.println("1. AND");
+System.out.println(true && true); // true
+System.out.println(true && false); // false
+System.out.println(false && true); // false
+System.out.println(false && false); // false
+System.out.println(10 == 10 && 5 == 5); // true
+System.out.println(10 == 10 && 5 == 6); // false
+System.out.println("");
+
+System.out.println("2. OR");
+System.out.println(true || true); // true
+System.out.println(true || false); // true
+System.out.println(false || true); // true
+System.out.println(false || false); // false
+System.out.println(10 == 10 || 5 == 5); // true
+System.out.println(10 == 10 || 5 == 6); // true
+System.out.println(10 == 11 || 5 == 6); // false
+System.out.println("");
+
+System.out.println("3. NOT");
+System.out.println(!true); // false
+System.out.println(!false); // true
+System.out.println(!(10 == 10)); // false
+System.out.println(!(10 == 11)); // true
+System.out.println("");
+
+System.out.println("********** Operador Ternario **********");
+System.out.println(true ? "verdadero" : "falso"); // verdadero
+System.out.println(false ? "verdadero" : "falso"); // falso
+System.out.println(10 == 10 ? "verdadero" : "falso"); // verdadero
+System.out.println(10 == 11 ? "verdadero" : "falso"); // falso
+System.out.println("");
+
+// ------------------------------------------------------------
+System.out.println("********** System.out.println **********");
+
+System.out.println(10.123);
+System.out.println("hola\n", "mundo"); /*hola
+mundo*/
+System.out.println('a'); // a
+System.out.println("mundo", "hola"); // mundo hola
+System.out.println("hola", 10); // hola 10
+System.out.println(true); // true
+System.out.println(false); // false
+System.out.println("");
+
+// ------------------------------------------------------------
+System.out.println("********** Manejo del valor nulo **********");
+
+System.out.println("1 Declaracion sin asignar valor");
+
+int numero3; // null
+float numero4; // null
+
+System.out.println(numero3);
+System.out.println(numero4);
+System.out.println("");
+
+System.out.println("2. Manejo en tiempo de ejecucion");
+int denominador = 0;
+// NO HAY ERROR EN TIEMPO DE COMPILACION
+// PERO SI ERROR EN TIEMPO DE EJECUCION: mostrar un error en consola y asignar null a la variable (debe ser manejado por risc-v)
+int divisionPorCero = 10 / denominador; 
+System.out.println(divisionPorCero); // null
