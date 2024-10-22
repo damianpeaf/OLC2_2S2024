@@ -331,13 +331,6 @@ System.out.println(!(10 == 10)); // false
 System.out.println(!(10 == 11)); // true
 System.out.println("");
 
-System.out.println("********** Operador Ternario **********");
-System.out.println(true ? "verdadero" : "falso"); // verdadero
-System.out.println(false ? "verdadero" : "falso"); // falso
-System.out.println(10 == 10 ? "verdadero" : "falso"); // verdadero
-System.out.println(10 == 11 ? "verdadero" : "falso"); // falso
-System.out.println("");
-
 // ------------------------------------------------------------
 System.out.println("********** System.out.println **********");
 
@@ -369,3 +362,245 @@ int denominador = 0;
 // PERO SI ERROR EN TIEMPO DE EJECUCION: mostrar un error en consola y asignar null a la variable (debe ser manejado por risc-v)
 int divisionPorCero = 10 / denominador; 
 System.out.println(divisionPorCero); // null
+
+/*
+
+SALIDA ESPERADA:
+
+********** Declaracion de variables **********
+1. Declaracion con tipo y valor
+10
+20.5
+Hola mundo
+a
+
+3. Declaracion infiriendo el tipo
+10
+20.5
+Hola mundo
+a
+
+********** Asignacion de variables **********
+20
+30.5
+Adios mundo
+b
+
+********** Operaciones aritmeticas **********
+1. Suma / Concatenacion
+1.1 int <-> int
+15
+1.2 float <-> float
+16.0
+1.3 int <-> float
+15.5
+1.4 float <-> int
+15.5
+1.5 var[int] <-> var[float]
+30.5
+1.6 string <-> string
+Hola mundo
+1.7 var[string] <-> string
+Hola mundo mundo
+
+2. Resta
+2.1 int <-> int
+5
+2.2 float <-> float
+5.0
+2.3 int <-> float
+4.5
+2.4 float <-> int
+5.5
+2.5 var[int] <-> var[float]
+-10.5
+
+3. Multiplicacion
+3.1 int <-> int
+50
+3.2 float <-> float
+57.75
+3.3 int <-> float
+55.0
+3.4 float <-> int
+52.5
+3.5 var[int] <-> var[float]
+205.0
+
+4. Division
+4.1 int <-> int
+2
+4.2 float <-> float
+1.9090909090909092
+4.3 int <-> float
+1.8181818181818181
+4.4 float <-> int
+2.1
+4.5 var[int] <-> var[float]
+0.4878048780487805
+
+5. Modulo
+0
+1
+
+6. Resta unaria
+-10
+-10.5
+
+7. Compuesta
+9
+11.75
+
+********** Operaciones Relacionales **********
+1. Igualdad
+1.1 int <-> int
+false
+1.2 float <-> float
+true
+false
+1.3 int <-> float
+false
+false
+1.4 var[int] <-> var[float]
+false
+1.5 string <-> string
+true
+false
+true
+1.6 var[string] <-> string
+true
+1.7 boolean <-> boolean
+true
+false
+1.8 char <-> char
+true
+false
+
+2. Diferencia
+2.1 int <-> int
+false
+true
+2.2 float <-> float
+false
+true
+2.3 int <-> float
+true
+true
+2.4 string <-> string
+false
+true
+2.5 var[string] <-> string
+false
+2.6 boolean <-> boolean
+false
+true
+2.7 char <-> char
+false
+true
+
+3. Mayor que
+3.1 int <-> int
+true
+false
+3.2 float <-> float
+true
+false
+3.3 int <-> float
+true
+false
+true
+false
+3.4 char <-> char
+false
+true
+false
+
+4. Menor que
+4.1 int <-> int
+false
+false
+4.2 float <-> float
+false
+false
+4.3 int <-> float
+false
+true
+4.4 char <-> char
+true
+false
+false
+
+5. Mayor o igual que
+5.1 int <-> int
+true
+true
+5.2 float <-> float
+true
+true
+5.3 int <-> float
+true
+false
+5.4 char <-> char
+false
+true
+true
+
+6. Menor o igual que
+6.1 int <-> int
+false
+true
+6.2 float <-> float
+false
+true
+6.3 int <-> float
+false
+true
+6.4 char <-> char
+true
+false
+true
+
+********** Operaciones Logicas **********
+1. AND
+true
+false
+false
+false
+true
+false
+
+2. OR
+true
+true
+true
+false
+true
+true
+false
+
+3. NOT
+false
+true
+false
+true
+
+********** System.out.println **********
+10.123
+hola
+mundo
+a
+mundohola
+hola10
+true
+false
+
+********** Manejo del valor nulo **********
+1 Declaracion sin asignar valor
+null
+null
+
+2. Manejo en tiempo de ejecucion
+Math Error: Zero Division
+null
+
+*/

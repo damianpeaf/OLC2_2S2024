@@ -6,7 +6,6 @@ System.out.println("********** Creacion de array **********");
 System.out.println("1. Con lista de valores");
 
 int[] numerosPares = {2, 4, 6, 8, 10};
-
 for (int i = 0; i < 5; i = i + 1) {
     System.out.println(numerosPares[i]);
 }
@@ -72,3 +71,61 @@ System.out.println("");
 for (int i = 0; i < copiaPares.length; i = i + 1) {
     System.out.println(copiaPares[i]);
 }
+
+/*
+SALIDA ESPERADA:
+
+********** Creacion de array **********
+1. Con lista de valores
+2
+4
+6
+8
+10
+Ok
+
+2. Con tamaño
+0
+0
+0
+0
+0
+Ok
+
+3. Por copia
+2
+4
+6
+8
+10
+Ok
+
+********** Acceso a elementos **********
+1. Lectura de elementos
+2
+6
+0
+0
+
+2. Asignacion de elementos
+20
+6
+
+********** Funciones y propedades de array **********
+1. indexOf
+4
+-1
+
+2. join
+2, 4, 6, 8, 10
+
+3. length
+5
+
+2
+4
+6
+8
+10
+
+*/

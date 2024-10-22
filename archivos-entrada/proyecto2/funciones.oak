@@ -82,6 +82,8 @@ int ackermann(int m, int n) {
         return ackermann(m - 1, ackermann(m, n - 1));
     }
 }
+System.out.println(ackermann(3, 3));
+System.out.println("");
 
 // ------------------------------------------------------------
 
@@ -133,3 +135,63 @@ System.out.println(typeof decimal); // "float"
 System.out.println(typeof cadena); // "string"
 System.out.println(typeof letra); // "char"
 System.out.println(typeof true); // "boolean"
+
+
+/*
+Salida esperada:
+
+********** Funciones no recursivas sin parámetros **********
+1. void
+Hola
+
+2. Con retorno
+30
+
+********** Funciones no recursivas con parámetros **********
+1. void
+Hola mundo
+
+2. Con retorno
+30
+
+********** Funciones recursivas **********
+1. Factorial
+120
+
+2. Fibonacci
+55
+
+3. Ackermann
+61
+
+********** Funciones embebidas **********
+
+1. parseInt
+Conversion error
+10
+10
+
+2. parsefloat
+10.0
+10.5
+Conversion error
+
+3. toString
+10
+10.510
+Fortran es el mejor lenguaje: true
+
+4. toLowerCase
+hola mundo
+
+5. toUpperCase
+HOLA MUNDO
+
+6. typeof
+int
+float
+string
+char
+boolean
+
+*/
