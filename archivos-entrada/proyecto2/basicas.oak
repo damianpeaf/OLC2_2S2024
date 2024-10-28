@@ -374,7 +374,7 @@ SALIDA ESPERADA:
 Hola mundo
 a
 
-3. Declaracion infiriendo el tipo
+2. Declaracion infiriendo el tipo
 10
 20.5
 Hola mundo
@@ -445,6 +445,7 @@ Hola mundo mundo
 
 6. Resta unaria
 -10
+10
 -10.5
 
 7. Compuesta
